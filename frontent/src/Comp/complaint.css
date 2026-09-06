@@ -1,204 +1,150 @@
- 
-
+/* Complaint Page */
 .mainDiv {
     width: 100%;
-    background-color:white;
-    padding: 20px;
-}
-.h2{
-    color: black;
-    font-size: 30px;
-    font-weight: bold;
-    padding: 10px;
-}
-.p {
-    margin: 7px;
-    font-size: 18px;
+    height: calc(100vh - 70px);
+    padding: 30px 20px 50px;
+    background: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
+.form:hover {
+    border: 1px solid black;
+}
+
+/* Complaint Form */
 .form {
-    padding: 20px 20px;
-    margin: auto;
-    width: 500px;
-    border: 1px solid black;
-    box-shadow: 0px 0px 5px 0px black;
-    border-radius: 15px;
+    width: 100%;
+    max-width: 650px;
+    margin: 20px 0;
+    padding: 30px 35px;
+    background: #ffffff;
+    border: 1px solid #dbe2ea;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+    box-sizing: border-box;
 }
 
+/* Heading */
+.h2 {
+    margin: 0 0 8px;
+    text-align: center;
+    color: #111827;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.p {
+    margin: 0 0 25px;
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Labels */
 .labelcom {
-    font-size: 15px;
     display: block;
+    margin: 16px 0 7px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Inputs */
+.inputcom,
+.textarea {
     width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: left;
+    box-sizing: border-box;
+    padding: 11px 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #1e293b;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s ease;
 }
 
-.inputcom {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid black;
-    border-radius: 5px;
-
-}
-.inputcom:hover{
-    background-color: rgb(240, 238, 238);
-    color:black;
-}
-
-.paracom {
-    font-size: 12px;
-    margin-bottom: 20px;
-    margin-top: 3px;
-    font-family: sans-serif;
+.inputcom:focus,
+.textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .textarea {
-    resize: none;
-    width: 100%;
-    min-height: 100px;
-    max-height: 150px;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: sans-serif;
-
-
-}
-.textarea:hover{
-    background-color: rgb(240, 238, 238);
-
+    resize: vertical;
+    min-height: 90px;
 }
 
+/* File input */
+input[type="file"] {
+    cursor: pointer;
+    background: #f8fafc;
+}
+
+/* Supported formats text */
+.paracom {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Buttons */
 .btnsss {
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 5px 10px;
-    
+    gap: 12px;
+    margin-top: 28px;
 }
 
 .btn {
-    padding: 8px 10px;
-    border-radius: 5px;
+    min-width: 130px;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #1e3a8a;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
-    margin: 5px;
-    background: none;
-    border: 1px solid black;
+    transition: 0.2s ease;
 }
 
 .btn:hover {
-    background-color:black;
-    color:white;
-    border: 1px solid white;
+    background: #172554;
 }
 
-
-
-/* mycomplaints showing*/
-
-.divmycom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    gap: 20px;
-    font-family: sans-serif;
-}
-.cardDiv {
-    background-color:white;
-
-    color:black;
-    border: 1px solid black;
-    padding: 15px;
-    border-radius: 15px;
-    margin-top: 10px;
-    
-    font-size: 13px;
-    width: 100%;
-    /* color: rgb(53, 52, 52); */
-
-}
-.id{
-    display: flex;
-    align-items: center;
-}
-.rightDiv{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.removeBtn{
-    all: unset;
-    font-size: 13px;
-     padding: 4px 5px;
-    border-radius: 5px ;
-    border: 0.5px solid black;
-    background-color:white;
-    color:black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    text-align: center;
-     
-}
-.removeBtn:hover{
-    background-color:black;
-    color:white;
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
-.idsec {
-    background-color: rgb(218, 83, 83);
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    height: fit-content;
-}
+/* Mobile */
+@media (max-width: 600px) {
+    .mainDiv {
+        padding: 20px 12px 40px;
+    }
 
-.wardsec,
-.locationsec,
-.categorysec {
-    display: flex;
-    justify-content: space-between;
-    height: fit-content;
-    padding-top: 20px;
-    width: 100%;
+    .form {
+        margin: 10px 0;
+        padding: 24px 20px;
+    }
 
-}
+    .h2 {
+        font-size: 22px;
+    }
 
-.descriptionsec {
-    padding-top: 20px;
-}
-.dec{
-    padding-bottom: 5px;
-}
-.h3 {
-    text-align: left;
-    padding-top: 10px;
-}
-.h1text{
-    color: red;
-}
-.newcom {
-    padding: 5px 10px;
-    cursor: pointer;
-    background-color:white;
-    border-radius: 5px;
-    border:1px solid black;
-}
-.newcom:hover{
-    background-color:black;
-    color: white;
-}
+    .btnsss {
+        flex-direction: column;
+    }
 
-.textdiv {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    gap: 10px;
+    .btn {
+        width: 100%;
+    }
 }

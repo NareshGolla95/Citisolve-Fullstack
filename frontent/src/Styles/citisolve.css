@@ -1,0 +1,372 @@
+/* =========================================
+   CITISOLVE HOME PAGE
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+.mainDiv1 {
+    min-height: calc(100vh - 70px);
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+    padding-bottom: 70px;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.mainText {
+    min-height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px 60px;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(79, 70, 229, 0.10), transparent 30%),
+        radial-gradient(circle at 80% 30%, rgba(59, 130, 246, 0.10), transparent 30%);
+}
+
+.mainText h1 {
+    margin: 0;
+    color: #111827;
+    font-size: clamp(38px, 6vw, 64px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.mainText p {
+    margin: 22px 0 30px;
+    color: #64748b;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 700px;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.extraBtns {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+.extraBtns button {
+    min-width: 125px;
+    padding: 13px 25px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.extraLogin {
+    border: 1px solid #4f46e5;
+    background: #4f46e5;
+    color: white;
+}
+
+.extraLogin:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+}
+
+.extraReg {
+    border: 1px solid #d1d5db;
+    background: white;
+    color: #374151;
+}
+
+.extraReg:hover {
+    background: #f8fafc;
+    border-color: #9ca3af;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.workstext {
+    margin: 10px 0 35px;
+    text-align: center;
+    color: #111827;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.information {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.regInfm,
+.subInfm,
+.trackInfm {
+    background: white;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+    transition: all 0.25s ease;
+}
+
+.regInfm:hover,
+.subInfm:hover,
+.trackInfm:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.10);
+}
+
+.regInfm h1,
+.subInfm h1,
+.trackInfm h1 {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #4f46e5;
+    color: white;
+    font-size: 22px;
+}
+
+.regInfm h3,
+.subInfm h3,
+.trackInfm h3 {
+    margin: 0 0 10px;
+    color: #1f2937;
+    font-size: 20px;
+}
+
+.regInfm p,
+.subInfm p,
+.trackInfm p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   READY TO GET STARTED
+========================================= */
+
+.readyToGo {
+    width: min(1000px, 90%);
+    margin: 70px auto 0;
+    padding: 55px 30px;
+    text-align: center;
+    border-radius: 20px;
+    background: #111827;
+    color: white;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+}
+
+.readyToGo h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.readyToGo p {
+    margin: 12px 0 28px;
+    color: #cbd5e1;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   BOTTOM BUTTONS
+========================================= */
+
+.anotherBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.anotherBtns button {
+    min-width: 140px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+
+/* Create Account */
+
+.acc {
+    border: 1px solid white;
+    background: white;
+    color: #111827;
+}
+
+.acc:hover {
+    background: #f1f5f9;
+    transform: translateY(-2px);
+}
+
+
+/* Sign In */
+
+.SignIn {
+    border: 1px solid #6366f1;
+    background: #4f46e5;
+    color: white;
+}
+
+.SignIn:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+
+/* Admin */
+
+.adminBtn {
+    border: 1px solid #475569;
+    background: transparent;
+    color: #e2e8f0;
+}
+
+.adminBtn:hover {
+    background: #1e293b;
+    border-color: #64748b;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .mainText {
+        min-height: 430px;
+        padding: 65px 20px 50px;
+    }
+
+    .mainText h1 {
+        font-size: 43px;
+    }
+
+    .mainText p {
+        font-size: 16px;
+    }
+
+    .information {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+    }
+
+    .readyToGo {
+        margin-top: 55px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .mainDiv1 {
+        padding-bottom: 45px;
+    }
+
+    .mainText {
+        min-height: 400px;
+        padding: 55px 18px 40px;
+    }
+
+    .mainText h1 {
+        font-size: 34px;
+        letter-spacing: -0.8px;
+    }
+
+    .mainText p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin: 18px 0 25px;
+    }
+
+    .mainText p br {
+        display: none;
+    }
+
+    .extraBtns {
+        width: 100%;
+    }
+
+    .extraBtns button {
+        min-width: 110px;
+        padding: 12px 18px;
+    }
+
+    .workstext {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+
+    .information {
+        width: 90%;
+        gap: 18px;
+    }
+
+    .regInfm,
+    .subInfm,
+    .trackInfm {
+        padding: 28px 20px;
+    }
+
+    .readyToGo {
+        width: 90%;
+        margin-top: 45px;
+        padding: 40px 20px;
+        border-radius: 16px;
+    }
+
+    .readyToGo h2 {
+        font-size: 25px;
+    }
+
+    .readyToGo p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .anotherBtns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .anotherBtns button {
+        width: 100%;
+    }
+}

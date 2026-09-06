@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import './complaint.css';
+import '../Styles/mycomp.css';
 
 const MyComplaint = () => {
 
@@ -68,7 +68,6 @@ const MyComplaint = () => {
                 throw new Error(data.message || "Delete failed");
             }
 
-            // Remove from UI
             setComplaints(prev =>
                 prev.filter(item => item._id !== id)
             );
@@ -102,7 +101,7 @@ const MyComplaint = () => {
                         <div key={c._id} className='cardDiv'>
 
                             <section className='idsec'>
-                                <h4 className='id'>ID: {c._id.slice(0,4)}</h4>
+                                <h4 className='id'>ID: {c._id.slice(0, 4)}</h4>
 
                                 <div className='rightDiv'>
                                     <p className='id'>{c.status}</p>

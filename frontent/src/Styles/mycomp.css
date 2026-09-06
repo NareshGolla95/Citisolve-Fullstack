@@ -1,0 +1,356 @@
+/* =========================
+   MY COMPLAINTS PAGE
+========================= */
+
+.divmycom {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+
+    padding: 35px 25px 60px;
+
+    background: #f1f5f9;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/* Main Container */
+
+.cardsContainer {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* Page Heading */
+
+.textdiv {
+    position: relative;
+
+    margin-bottom: 25px;
+    padding: 25px 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.06);
+}
+
+.h1text {
+    margin: 0 0 6px;
+
+    color: #111827;
+
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.textdiv p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* New Complaint Button */
+
+.newcom {
+    position: absolute;
+
+    right: 30px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    padding: 10px 17px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #1e3a8a;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.newcom:hover {
+    background: #172554;
+}
+
+
+/* Complaint Card */
+
+.cardDiv {
+    width: 100%;
+
+    margin-bottom: 20px;
+    padding: 24px 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.06);
+
+    box-sizing: border-box;
+
+    transition: 0.2s ease;
+}
+
+.cardDiv:hover {
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.09);
+}
+
+
+/* ID + Status + Remove */
+
+.idsec {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.id {
+    margin: 0;
+
+    color: #475569;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.rightDiv {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* Status */
+
+.rightDiv .id {
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background: #eff6ff;
+    color: #1d4ed8;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* Remove Button */
+
+.removeBtn {
+    padding: 7px 13px;
+
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+
+    background: #fef2f2;
+    color: #dc2626;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.removeBtn:hover {
+    background: #fee2e2;
+    border-color: #fca5a5;
+}
+
+
+/* Complaint Details */
+
+.wardsec,
+.locationsec,
+.categorysec,
+.descriptionsec {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 17px;
+}
+
+.wardsec h3,
+.locationsec h3,
+.categorysec h3,
+.descriptionsec h3 {
+    margin: 0;
+
+    color: #334155;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1.5;
+}
+
+.wardsec h3:first-child,
+.locationsec h3:first-child,
+.categorysec h3:first-child,
+.descriptionsec h3:first-child {
+    min-width: 95px;
+
+    color: #64748b;
+
+    font-weight: 600;
+}
+
+
+/* Description */
+
+.descriptionsec {
+    align-items: flex-start;
+}
+
+.descriptionsec h3:last-child {
+    flex: 1;
+
+    color: #475569;
+
+    font-weight: 400;
+
+    line-height: 1.6;
+
+    word-break: break-word;
+}
+
+
+/* Complaint Photo */
+
+.cardDiv img {
+    display: block;
+
+    width: 200px;
+    max-width: 100%;
+    height: 140px;
+
+    margin-top: 20px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    border: 1px solid #e2e8f0;
+}
+
+
+/* Loading / Empty Message */
+
+.pCom {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+
+    background: #f1f5f9;
+
+    color: #64748b;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .divmycom {
+        padding: 20px 12px 40px;
+    }
+
+    .textdiv {
+        padding: 22px 20px;
+
+        text-align: center;
+    }
+
+    .h1text {
+        font-size: 23px;
+    }
+
+    .textdiv p {
+        font-size: 13px;
+    }
+
+    .newcom {
+        position: static;
+
+        transform: none;
+
+        margin-top: 18px;
+
+        width: 100%;
+    }
+
+    .cardDiv {
+        padding: 20px;
+    }
+
+    .idsec {
+        align-items: flex-start;
+    }
+
+    .rightDiv {
+        gap: 7px;
+
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .wardsec,
+    .locationsec,
+    .categorysec,
+    .descriptionsec {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .wardsec h3:first-child,
+    .locationsec h3:first-child,
+    .categorysec h3:first-child,
+    .descriptionsec h3:first-child {
+        min-width: auto;
+    }
+
+    .cardDiv img {
+        width: 100%;
+        height: 180px;
+    }
+}

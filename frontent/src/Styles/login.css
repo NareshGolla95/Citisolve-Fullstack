@@ -1,0 +1,272 @@
+/* =========================
+   REMOVE PAGE SCROLL
+========================= */
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.mainDiv2 {
+    position: fixed;
+
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: calc(100vh - 70px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: #f1f5f9;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   LOGIN FORM
+========================= */
+
+.mainDiv2 form {
+    width: 100%;
+    max-width: 400px;
+
+    flex-shrink: 0;
+}
+
+.formDiv {
+    width: 100%;
+
+    padding: 30px 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #d6dde6;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.10);
+
+    /* Prevent form from moving */
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.formDiv h2 {
+    margin: 0 0 22px;
+
+    text-align: center;
+
+    color: #1e293b;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.InputDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.InputDiv label {
+    margin-bottom: 6px;
+
+    color: #334155;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.InputDiv label:not(:first-child) {
+    margin-top: 15px;
+}
+
+.loginInput {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+
+    background: #f8fafc;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+
+    outline: none;
+
+    color: #1e293b;
+
+    font-size: 14px;
+}
+
+.loginInput:focus {
+    background: #ffffff;
+
+    border-color: #475569;
+
+    box-shadow: 0 0 0 2px rgba(71, 85, 105, 0.08);
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.formDiv p[style] {
+    margin: 10px 0 0;
+
+    padding: 7px 10px;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 6px;
+
+    color: #b91c1c !important;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.LoginBtn {
+    width: 100%;
+    height: 42px;
+
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #1e293b;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.LoginBtn:hover:not(:disabled) {
+    background: #0f172a;
+}
+
+.LoginBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.formDiv hr {
+    margin: 10px 0 10px;
+
+    border: none;
+    border-top: 1px solid #e2e8f0;
+}
+
+
+/* =========================
+   REGISTER
+========================= */
+
+.formDiv > p:last-child {
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.regNaviBtn {
+    padding: 0;
+
+    border: none;
+/* padding-bottom: 10px; */
+    background: transparent;
+
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.regNaviBtn:hover {
+    color: #0f172a;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .mainDiv2 {
+        top: 70px;
+        bottom: 0;
+
+        height: calc(100vh - 70px);
+
+        padding: 15px;
+    }
+
+    .formDiv {
+        padding: 27px 22px;
+    }
+
+    .formDiv h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .loginInput {
+        height: 40px;
+    }
+
+    .LoginBtn {
+        height: 40px;
+    }
+}

@@ -1,0 +1,169 @@
+/* ================================
+   ADMIN LOGIN PAGE
+================================ */
+
+.adminLoginPage {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   LOGIN BOX
+================================ */
+
+.adminLoginBox {
+    width: 100%;
+    max-width: 430px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+    border: 1px solid #e5e7eb;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.adminLoginBox h1 {
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.adminLoginBox > p {
+    margin: 0 0 30px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.adminLoginBox form {
+    display: flex;
+    flex-direction: column;
+}
+
+.adminLoginBox label {
+    margin-bottom: 8px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.adminLoginBox input {
+    width: 100%;
+    padding: 13px 14px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    outline: none;
+    font-size: 15px;
+    color: #111827;
+    background: #ffffff;
+    box-sizing: border-box;
+    transition: 0.2s ease;
+}
+
+.adminLoginBox input::placeholder {
+    color: #9ca3af;
+}
+
+.adminLoginBox input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+
+/* ================================
+   SUBMIT BUTTON
+================================ */
+
+.adminLoginBox form button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 9px;
+    background: #4f46e5;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.adminLoginBox form button:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+.adminLoginBox form button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* ================================
+   BACK TO HOME BUTTON
+================================ */
+
+.backBtn {
+    width: 100%;
+    margin-top: 14px;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.backBtn:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 500px) {
+
+    .adminLoginPage {
+        padding: 20px 15px;
+    }
+
+    .adminLoginBox {
+        padding: 30px 22px;
+        border-radius: 15px;
+    }
+
+    .adminLoginBox h1 {
+        font-size: 26px;
+    }
+
+    .adminLoginBox > p {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+}

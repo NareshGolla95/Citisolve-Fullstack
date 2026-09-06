@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./style.css";
+import "../Styles/register.css";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
@@ -102,7 +102,7 @@ const Register = () => {
           >
             <option value="">Select Role</option>
             <option value="Citizen">Citizen</option>
-            <option value="Admin">Admin</option>
+            {/* <option value="Admin">Admin</option> */}
           </select>
 
           <p className="para">

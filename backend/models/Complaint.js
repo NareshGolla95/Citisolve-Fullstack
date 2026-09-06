@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-
 const complaintSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
@@ -15,5 +14,4 @@ const complaintSchema = new mongoose.Schema({
     default: "Pending"
   }
 }, { timestamps: true });
-
 export default mongoose.model("Complaint", complaintSchema);

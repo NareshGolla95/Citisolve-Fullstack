@@ -1,10 +1,9 @@
 import React from 'react'
-import './style.css';
+import '../Styles/citisolve.css';
 import { useNavigate } from "react-router-dom";
 
 const Citisolve = () => {
     const navigate = useNavigate();
-
     return (
         <>
             <div className='mainDiv1'>
@@ -38,8 +37,14 @@ const Citisolve = () => {
                     <h2>Ready to Get Started?</h2>
                     <p>Join our community and help make a difference</p>
                     <div className='anotherBtns'>
-                        <button className='acc' onClick={()=>navigate("/register")}>Create Account</button>
-                        <button className='SignIn' onClick={()=>navigate("/login")}> Sign In</button>
+                        <button className='acc' onClick={() => navigate("/register")}>Create Account</button>
+                        <button className='SignIn' onClick={() => navigate("/login")}> Sign In</button>
+                        <button
+                            className='adminBtn'
+                            onClick={() => navigate('/admin-login')}
+                        >
+                            Admin
+                        </button>
                     </div>
                 </div>
 
@@ -47,5 +52,4 @@ const Citisolve = () => {
         </>
     )
 }
-
 export default Citisolve
