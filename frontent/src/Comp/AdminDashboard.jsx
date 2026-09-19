@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Styles/AdminDashboard.css";
+import { API_URL } from "../api";
 
 const AdminDashboard = () => {
     const navigate = useNavigate();
@@ -11,10 +12,11 @@ const AdminDashboard = () => {
     const [statusFilter, setStatusFilter] = useState("All");
     const token = localStorage.getItem("adminToken");
 
+    
     const fetchComplaints = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/complaints/all",
+                `${API_URL}/api/complaints/all`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -37,7 +39,7 @@ const AdminDashboard = () => {
     const fetchUsers = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/auth/users",
+                `${API_URL}/api/auth/users`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -76,7 +78,7 @@ const AdminDashboard = () => {
     const updateStatus = async (id, newStatus) => {
         try {
             const response = await fetch(
-                `http://localhost:5000/api/complaints/${id}/status`,
+                `${API_URL}/api/complaints/${id}/status`,
                 {
                     method: "PUT",
                     headers: {
@@ -117,7 +119,7 @@ const AdminDashboard = () => {
         if (!confirmDelete) return;
         try {
             const response = await fetch(
-                `http://localhost:5000/api/complaints/${id}`,
+                `${API_URL}/api/complaints/${id}`,
                 {
                     method: "DELETE",
                     headers: {
@@ -147,7 +149,7 @@ const AdminDashboard = () => {
         if (!confirmDelete) return;
         try {
             const response = await fetch(
-                `http://localhost:5000/api/auth/users/${id}`,
+                `${API_URL}/api/auth/users/${id}`,
                 {
                     method: "DELETE",
                     headers: {
@@ -491,7 +493,7 @@ const AdminDashboard = () => {
                                                     Complaint Photo
                                                 </h4>
                                                 <img
-                                                    src={`http://localhost:5000/uploads/${complaint.photo}`}
+                                                    src={`${API_URL}/uploads/${complaint.photo}`}
                                                     alt="Complaint"
                                                 />
                                             </div>

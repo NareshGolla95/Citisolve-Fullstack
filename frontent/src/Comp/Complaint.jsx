@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import './complaint.css';
-
+import { API_URL } from "../api";
 const Complaint = () => {
 
     const navigate = useNavigate();
@@ -48,7 +48,7 @@ const Complaint = () => {
             }
 
             const response = await fetch(
-                "http://localhost:5000/api/complaints",
+                `${API_URL}/api/complaints`,
                 {
                     method: "POST",
                     headers: {

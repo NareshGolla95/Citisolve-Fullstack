@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import '../Styles/mycomp.css';
-
+import { API_URL } from "../api";
 const MyComplaint = () => {
 
     const navigate = useNavigate();
@@ -22,7 +22,7 @@ const MyComplaint = () => {
 
         try {
             const response = await fetch(
-                "http://localhost:5000/api/complaints/my",
+                `${API_URL}/api/complaints/my`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -53,7 +53,7 @@ const MyComplaint = () => {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/complaints/${id}`,
+                `${API_URL}/api/complaints/${id}`,
                 {
                     method: "DELETE",
                     headers: {
@@ -137,7 +137,7 @@ const MyComplaint = () => {
 
                             {c.photo && (
                                 <img
-                                    src={`http://localhost:5000/uploads/${c.photo}`}
+                                    src={`${API_URL}/uploads/${c.photo}`}
                                     alt="complaint"
                                     width="200"
                                 />

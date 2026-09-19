@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../Styles/login.css";
 import { useNavigate } from "react-router-dom";
-
+import { API_URL } from "../api";
 const Login = () => {
   const navigate = useNavigate();
   const [loading, setloading] = useState(false);
@@ -14,7 +14,7 @@ const Login = () => {
     seterror("");
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/login",
+        `${API_URL}/api/auth/login`,
         {
           method: "POST",
           headers: {
